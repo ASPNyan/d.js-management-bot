@@ -3,7 +3,7 @@
 
 This is a Discord Bot written in TypeScript for mainly User Management, including slash commands to Kick, Ban, Timeout, and Purge, as well as other commands.
 
-Make sure to add your bot's token to the .env file provided so that the .env reads `TOKEN:// Your Token here (no space)`
+Make sure to add your bot's token & MongoDB URI to the .env file provided so that the .env reads `TOKEN:// Your Token here (no space)` & `MONGODB:// Your URI here (no space)`
 
 To add a slash command with [WOKCommands](https://github.com/AlexzanderFlores/WOKCommands), add a .ts file to the 'commands' folder and insert the following code
 **Note: The name of the .ts file will be the name of your command in Discord**
@@ -27,3 +27,4 @@ export default {
     },
 } as ICommand
 ```
+
