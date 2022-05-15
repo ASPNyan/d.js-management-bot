@@ -4,6 +4,7 @@
 This is a Discord Bot written in TypeScript for mainly User Management, including slash commands to Kick, Ban, Timeout, and Purge, as well as other commands.
 
 Make sure to add your bot's token & MongoDB URI to the .env file provided so that the .env reads `TOKEN:// Your Token here (no space)` & `MONGODB:// Your URI here (no space)`
+If you don't have/know how to make a MongoDB database, watch the video [__here__](https://www.youtube.com/watch?v=a3Gz_7KEJkQ).
 
 If you do not want to install the Nodemon NPM package, change the "dev" script in the `package.json` from `"dev": "nodemon index.ts"` to `"dev": "ts-node index.ts"`
 
