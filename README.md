@@ -32,7 +32,7 @@ export default {
 } as ICommand
 ```
 
-#### Dependencies
+### Dependencies
 Node.js: ^16.13.2
 [Typescript](https://www.npmjs.com/package/typescript): ^4.6.3
 [TS-Node](https://www.npmjs.com/package/ts-node): ^10.7.0
