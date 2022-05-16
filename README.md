@@ -10,6 +10,7 @@ If you do not want to install the Nodemon NPM package, change the "dev" script i
 
 To add a slash command with [WOKCommands](https://github.com/AlexzanderFlores/WOKCommands), add a .ts file to the 'commands' folder and insert the following code
 **Note: The name of the .ts file will be the name of your command in Discord**
+
 **Note 2: You can replace all of the `args` stuff with an `options: []` array if you know what you are doing**
 ```
 import { ICommand } from "wokcommands";
