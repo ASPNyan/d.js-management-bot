@@ -33,11 +33,17 @@ export default {
 ```
 
 ### Dependencies
-Node.js: ^16.13.2
+[Node.js](https://nodejs.org/en/download/): ^16.13.2
+
 [Typescript](https://www.npmjs.com/package/typescript): ^4.6.3
+
 [TS-Node](https://www.npmjs.com/package/ts-node): ^10.7.0
+
 [Discord.JS](https://www.npmjs.com/package/discord.js): ^13.1.0
+
 [WOKCommands](https://www.npmjs.com/package/wokcommands): ^1.5.3
+
 [Random](https://www.npmjs.com/package/random): ^3.0.6
-Mongoose: ^6.0.10
+
+[Mongoose](https://www.npmjs.com/package/mongoose): ^6.0.10
 
