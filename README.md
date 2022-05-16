@@ -9,6 +9,7 @@ If you don't have/know how to make a MongoDB database, watch the video [__here__
 If you do not want to install the Nodemon NPM package, change the "dev" script in the `package.json` from `"dev": "nodemon index.ts"` to `"dev": "ts-node index.ts"`
 
 To add a slash command with [WOKCommands](https://github.com/AlexzanderFlores/WOKCommands), add a .ts file to the 'commands' folder and insert the following code
+
 **Note: The name of the .ts file will be the name of your command in Discord**
 
 **Note 2: You can replace all of the `args` stuff with an `options: []` array if you know what you are doing**
