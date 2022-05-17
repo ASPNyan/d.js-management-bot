@@ -45,7 +45,5 @@ export default {
 
 [WOKCommands](https://www.npmjs.com/package/wokcommands): ^1.5.3
 
-[Random](https://www.npmjs.com/package/random): ^3.0.6
-
 [Mongoose](https://www.npmjs.com/package/mongoose): ^6.0.10
 
