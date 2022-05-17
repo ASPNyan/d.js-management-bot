@@ -1,6 +1,5 @@
-import { Message, MessageActionRow, MessageSelectMenu, MessageSelectOptionData, Role, TextChannel } from "discord.js";
+import { Client, GuildMember, Interaction, Message, MessageActionRow, MessageSelectMenu, MessageSelectOptionData, Role, TextChannel } from "discord.js";
 import { ICommand } from "wokcommands";
-import random from 'random'
 
 export default {
     category: 'Configuration',
@@ -13,12 +12,42 @@ export default {
     expectedArgs: '<channel> <messageId> <role>',
     expectedArgsTypes: ['CHANNEL', 'STRING', 'ROLE'],
 
-    slash: "both",
+    slash: true,
     guildOnly: true,
 
+    init: (client: Client) => {
+        client.on('interactionCreate', async interaction => {
+            if (!interaction.isSelectMenu()) {
+                return
+            }
+            const { customId, values, member } = interaction
+
+            if (customId === 'auto_roles' && member instanceof GuildMember) {
+                const component = interaction.component as MessageSelectMenu
+                const removed = component.options.filter((option) => {
+                    return !values.includes(option.value)
+                })
+
+                for (const id of removed) {
+                    await member.roles.remove(id.value)
+                }
+
+                for (const id of values) {
+                    await member.roles.add(id)
+                }
+
+                interaction.reply({
+                    content: `Added the selected roles!`,
+                    ephemeral: true
+                }).then()
+                console.log('finished')
+            }
+        })
+    },
+
     callback: async ({ message, interaction, args, client }) => {
-        const channel = (message ? message.mentions.channels.first() : interaction.options.getChannel('channel')) as TextChannel
-        if (!channel || channel.type === 'GUILD_TEXT') {
+        const channel = interaction.options.getChannel('channel') as TextChannel
+        if (!channel || !(channel.type === 'GUILD_TEXT')) {
             return 'Please tag a text channel'
         }
         
@@ -52,15 +81,13 @@ export default {
             value: role.id
         }]
 
-        const menuid = random.int(1000, 9999999999).toString()
-
         let menu = row.components[0] as MessageSelectMenu
         if (menu) {
             for (const o of menu.options) {
                 if (o.value === option[0].value) {
                     return {
                         custom: true,
-                        content: `<@&${o.value} is already associated with this menu!`,
+                        content: `<@&${o.value}> is already associated with this menu!`,
                         allowedMentions: {
                             roles: []
                         },
@@ -74,7 +101,7 @@ export default {
         } else {
             row.addComponents(
                 new MessageSelectMenu()
-                  .setCustomId(menuid)
+                  .setCustomId('auto_roles')
                   .setMinValues(0)
                   .setMaxValues(1)
                   .setPlaceholder('Select your roles here!')
@@ -88,7 +115,7 @@ export default {
 
         return {
             custom: true,
-            content: `Added <@&${role.id} to the auto roles menu! \n\`(Message ID: ${messageId} | Menu ID: ${menuid})`,
+            content: `Added <@&${role.id}> to the auto roles menu! \n\`(Message ID: ${messageId})\``,
             allowedMentions: {
                 roles: []
             },
