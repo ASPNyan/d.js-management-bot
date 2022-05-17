@@ -1,6 +1,9 @@
 # Discord Management Bot
 ### A Discord Bot Utilising Mainly [Discord.JS](https://github.com/DiscordJS/Discord.JS) & [WOKCommands](https://github.com/AlexzanderFlores/WOKCommands)
 
+## KNOWN ISSUE
+**I wrote the wrong shit in the send command, I'll fix it in 1.0.1. I'm working on a fix now**
+
 This is a Discord Bot written in TypeScript for mainly User Management, including slash commands to Kick, Ban, Timeout, and Purge, as well as other commands.
 
 Make sure to add your bot's token & MongoDB URI to the .env file provided so that the .env reads `TOKEN=// Your Token here (no space)` & `MONGODB=// Your URI here (no space)`
