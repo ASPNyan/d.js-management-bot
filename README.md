@@ -78,4 +78,8 @@ The Purge command, also known by some as a Clear command, deletes a specified am
 
 ---
 ## Configuration
-###
+### Send & Autorole
+---
+Now it might seem strange having two seemingly different commands together, but you actually need the Send command for the Autoroles command. For the send command, there are two arguments: \[channel\] and \[text\]. The channel argument, similar to the user argument, shows a list of all the channels you can access. While you can select a voice channel, it **will not** work, so don't do that. Just select a text channel, then enter the text for the message in the text argument. Once you have a message sent by the bot, you can setup a Select Menu for Roles. The Select Menu is the successor to using Reaction roles. To use the autorole command, you need 3 different arguments: \[channel\], \[messageId\] and \[role\]. The channel is the same as the send command, giving you an option of all channels. **Only** use the channel that the message is in. The messageId can be found by right clicking the message and clicking Copy Message ID. If this option isn't there, go to `Behavior` in Discord Settings, then enable `Developer Mode`. Once you have the message id, paste it into the messageId argument. The final argument is the role argument. Discord will give you a list of roles to pick from, similar to the user argument. After exectuing the command a box should appear under the selected message with the role you selected showing in there. You ccan add more roles to the menu by repeating the command with different roles. Clicking on the roles you want in the Select Menu and then clicking off the menu will add the roles to you after a second or two.
+
+---
