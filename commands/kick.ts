@@ -3,7 +3,7 @@ import { ICommand } from "wokcommands";
 
 export default {
    category: 'User Administration',
-   description: 'Used to timeout any person (Time in Minutes)',
+   description: 'Used to kick any person',
 
 
    minArgs: 1,
