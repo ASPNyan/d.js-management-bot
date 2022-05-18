@@ -63,10 +63,18 @@ export default {
     ],
 
     callback: async ({ guild, member: staff, interaction }) => {
+        const author = interaction.member as GuildMember
         const subcommand = interaction.options.getSubcommand()
         const target = interaction.options.getUser('user')
         const reason = interaction.options.getString('reason')
         const remid = interaction.options.getString('id')
+        
+        if (!(author.permissions.has("MODERATE_MEMBERS"))) {
+            return interaction.reply({
+              content: 'You do not have the required permissions!\n(Required: `MODERATE_MEMBERS`)',
+              ephemeral: true
+            })
+        }
 
         if (subcommand === 'add') {
             const warning = await warnSchema.create({
