@@ -31,5 +31,10 @@ export default {
             }
         ])
         .setFooter('The framework for this bot was made by ASPNyan on Github ツ')
+        
+        interaction.reply({
+            embeds: [embed],
+            ephemeral: true
+        })
         }
 } as ICommand
