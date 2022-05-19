@@ -3,7 +3,7 @@ import { ICommand } from "wokcommands";
 
 export default {
     category: 'Configuration',
-    description: 'Adds a role to the Autorole message!',
+    description: 'Adds a role menu to the selected message!',
     
     permissions: ['MANAGE_ROLES'],
 
