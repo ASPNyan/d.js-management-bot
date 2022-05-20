@@ -78,9 +78,9 @@ export default {
 
         if (subcommand === 'add') {
             const warning = await warnSchema.create({
-                userID: target?.id,
-                staffID: staff?.id,
-                guildID: guild?.id,
+                userId: target?.id,
+                staffId: staff?.id,
+                guildId: guild?.id,
                 reason,
             })
 
