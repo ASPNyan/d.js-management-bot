@@ -1,6 +1,8 @@
-import { MessageEmbed } from 'discord.js'
+import { GuildMember, MessageEmbed } from 'discord.js'
 import { ICommand } from 'wokcommands'
 import warnSchema from '../warn-schema'
+
+const uri = process.env.MONGODB
 
 export default {
     category: "User Administration",
@@ -63,18 +65,24 @@ export default {
     ],
 
     callback: async ({ guild, member: staff, interaction }) => {
+        if (!uri) {
+            interaction.reply({
+                content: `ERR: This command is not set up correctly!\n||(Please make sure a valid MongoDB URI has been provided in .env)||`,
+                ephemeral: true
+            })
+        }
+
         const author = interaction.member as GuildMember
-        const subcommand = interaction.options.getSubcommand()
-        const target = interaction.options.getUser('user')
-        const reason = interaction.options.getString('reason')
-        const remid = interaction.options.getString('id')
-        
         if (!(author.permissions.has("MODERATE_MEMBERS"))) {
             return interaction.reply({
               content: 'You do not have the required permissions!\n(Required: `MODERATE_MEMBERS`)',
               ephemeral: true
             })
         }
+        const subcommand = interaction.options.getSubcommand()
+        const target = interaction.options.getUser('user')
+        const reason = interaction.options.getString('reason')
+        const remid = interaction.options.getString('id')
 
         if (subcommand === 'add') {
             const warning = await warnSchema.create({
@@ -116,7 +124,9 @@ export default {
                 description += `**Reason:** ${warn.reason}\n\n`
             }
 
-            const embed = new MessageEmbed().setDescription(description)
+            const embed = new MessageEmbed()
+            .setDescription(description)
+            .setColor('RED')
 
             return embed
         }
