@@ -88,3 +88,15 @@ The Purge command, also known by some as a Clear command, deletes a specified am
 Now it might seem strange having two seemingly different commands together, but you actually need the Send command for the Rolesmenu command. For the send command, there are two arguments: \[channel\] and \[text\]. The channel argument, similar to the user argument, shows a list of all the channels you can access. While you can select a voice channel, it **will not** work, so don't do that. Just select a text channel, then enter the text for the message in the text argument. Once you have a message sent by the bot, you can setup a Select Menu for Roles. The Select Menu is the successor to using Reaction roles. To use the Rolesmenu command, you need 3 different arguments: \[channel\], \[messageId\] and \[role\]. The channel is the same as the send command, giving you an option of all channels. **Only** use the channel that the message is in. The messageId can be found by right clicking the message and clicking Copy Message ID. If this option isn't there, go to `Behavior` in Discord Settings, then enable `Developer Mode`. Once you have the message id, paste it into the messageId argument. The final argument is the role argument. Discord will give you a list of roles to pick from, similar to the user argument. After exectuing the command a box should appear under the selected message with the role you selected showing in there. You can add more roles to the menu by repeating the command with different roles. Clicking on the roles you want in the Select Menu and then clicking off the menu will add the roles to you after a second or two.
 
 ---
+
+# License
+## CC BY-NC-SA 4.0
+By using this Discord Bot template, you agree to abiding by the license that I'm using, the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (or just CC BY-NC-SA 4.0 if you don't have time). What this allows you to do is explained [here](https://creativecommons.org/licenses/by-nc-sa/4.0/), but I'll summarise.
+
+The BY (aka Attribution) part of the license means that in using this, you must credit me as the original author of the template. Not too complex, and on GitHub all it takes is to just link this repo or my account. To make this easy, you can just copy this: \[ASPNyan](https://github.com/ASPNyan/).
+
+The NC (short for Non-Commercial) part of this license says that you may not use the image for commercial use, without asking me for permission first. This next part isn't stated on the CC website, but this what I will let you do with it as well. If the bot is used in a non-profit use then just let me know that you're using it and what you're using it for, but you don't need permission. (You can contact me on Discord @ `ASP Nyan#1169`).
+
+The SA (short for Share Alike) part of the license means that simply, if you publish the code somewhere else online (like GitHub or somewhere else) publicly, you must set the same license as I have set.
+
+---
