@@ -115,8 +115,8 @@ Now it might seem strange having two seemingly different commands together, but 
 
 ---
 
-# [License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-## CC BY-NC-SA 4.0
+# License
+## [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 By using this Discord Bot template, you agree to abiding by the license that I'm using, the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (or just CC BY-NC-SA 4.0 if you don't have time). What this allows you to do is explained [here](https://creativecommons.org/licenses/by-nc-sa/4.0/), but I'll summarise.
 
 The BY (aka Attribution) part of the license means that in using this, you must credit me as the original author of the template. Not too complex, and on GitHub all it takes is to just link this repo or my account. To make this easy, you can just copy this: \[ASPNyan](https://github.com/ASPNyan/).
