@@ -115,7 +115,7 @@ Now it might seem strange having two seemingly different commands together, but 
 
 ---
 
-# License
+# [License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 ## CC BY-NC-SA 4.0
 By using this Discord Bot template, you agree to abiding by the license that I'm using, the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (or just CC BY-NC-SA 4.0 if you don't have time). What this allows you to do is explained [here](https://creativecommons.org/licenses/by-nc-sa/4.0/), but I'll summarise.
 
