@@ -8,5 +8,9 @@ Remove-Item .\.env
 $Token = Read-Host -Prompt 'Input Your Bot Token Here'
 $Mongo = Read-Host -Prompt 'Input Your MongoDB URI Here'
 
-Add-Content -Path .\.env -Value 'TOKEN=$Token'
-Add-Content -Path .\.env -Value 'MONGODB=$Mongo'
+Add-Content -Path .\.env -Value ('TOKEN='+$Token)
+Add-Content -Path .\.env -Value ('MONGODB='+$Mongo)
+
+npm i
+
+.\start.ps1
