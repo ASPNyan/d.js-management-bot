@@ -3,10 +3,9 @@
 
 This is a Discord Bot framework written in TypeScript for mainly User & Text/Voice Management, including slash commands to Kick, Ban, Timeout, and Purge, as well as other commands. Make sure you download the Releases and not the Source Code!
 
-Make sure to add your bot's token & MongoDB URI to the .env file provided so that the .env reads `TOKEN=// Your Token here (no space)` & `MONGODB=// Your URI here (no space)`
-If you don't have/know how to make a MongoDB database, watch the video [__here__](https://www.youtube.com/watch?v=a3Gz_7KEJkQ).
+Make sure to have a Discord Bot setup and a MongoDB Database created beforehand.
 
-If you do not want to install the Nodemon NPM package, change the "dev" script in the `package.json` from `"dev": "nodemon index.ts"` to `"dev": "ts-node index.ts"`
+If you don't have/know how to make a MongoDB database, watch the video [__here__](https://www.youtube.com/watch?v=a3Gz_7KEJkQ).
 
 To add a slash command with [WOKCommands](https://github.com/AlexzanderFlores/WOKCommands), add a .ts file to the 'commands' folder and insert the following code
 
@@ -59,19 +58,10 @@ A Discord Application with a Bot Assigned to it (find your applications [here](h
 
 Node.JS and NPM installed
 
-A Code Editor or IDE (I prefer VS Code but go figure)
+(Optional) A Code Editor or IDE (I prefer VS Code but go figure)
 
 ### Setup
-
-**Before anything else** run `npm i` or `npm install` in your Management Bot folder. This will install the required dependencies (listed [here](https://github.com/ASPNyan/d.js-management-bot#Dependencies)).
-
-1. Copy the token of your Discord application's bot and paste it immediately after `TOKEN=` in the `.env` file so that it reads something like `TOKEN=12345678901234`
-
-2. Run the bot to make sure there were no errors in the dependency installation and to make sure your token is correct. There should be no issues and the console should log `Logged in as <username#tag> and online`, and then log that the bot has loaded all the commands. If the bot **doesn't** say it's loading some of the commands restart the bot by typing `rs` in the console and pressing enter. If the bot still doesn't load those commands or simply doesn't load any commands at all, send an issue to the GitHub [here](https://github.com/ASPNyan/d.js-management-bot/issues) and I'll get to it when I can. Running the commands may or may not work straight away, as they are global commands and I've had different experiences with them.
-
-3. Copy the MongoDB URI into the `.env` file immediately after `MONGODB=`, the same as your token and restart the bot by typing `rs` into the bot console and hitting enter.
-
-4. If your commands worked when you tested them in step two, then make sure that the commands requring a MongoDB connection work (warn commands), otherwise if the commands aren't working leave the bot up for around 30 minutes and by then they should most definitely be working. If the command(s) are still returning `The Application Didn't Respond` or `This Command Isn't Properly Registered`, or crashing the bot, then send an issue to the GitHub [here](https://github.com/ASPNyan/d.js-management-bot/issues) and provide the command(s) that aren't working.
+Run the following command in Powershell in the folder you want to install the bot into: `Invoke-WebRequest 'https://raw.githubusercontent.com/ASPNyan/d.js-management-bot/main/setup.ps1' -OutFile .\setup.ps1; .\setup.ps1`. This will install the [setup script](https://github.com/ASPNyan/d.js-management-bot/blob/main/setup.ps1) from the repo and run it. Once prompted, paste your Discord Bot's token into the shell and then the MongoDB URI which will be prompted after. The shell will then run the start script, deleting the setup files on the first run. On first run the start.ps1 will auto open the config script, and after that will prompt you if you want to run the config script.
 
 ---
 
