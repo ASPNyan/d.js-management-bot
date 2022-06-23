@@ -1,7 +1,7 @@
 # Discord Management Bot
 ### A Discord Bot Framework Utilising Mainly [Discord.JS](https://github.com/DiscordJS/Discord.JS) & [WOKCommands](https://github.com/AlexzanderFlores/WOKCommands)
 
-This is a Discord Bot framework written in TypeScript for mainly User & Text/Voice Management, including slash commands to Kick, Ban, Timeout, and Purge, as well as other commands. Make sure you download the Releases and not the Source Code!
+This is a Discord Bot framework written in TypeScript for mainly User & Text/Voice Management, including slash commands to Kick, Ban, Timeout, and Purge, as well as other commands. Make sure you follow the install instructions!
 
 Make sure to have a Discord Bot setup and a MongoDB Database created beforehand.
 
