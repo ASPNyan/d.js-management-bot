@@ -58,6 +58,8 @@ A Discord Application with a Bot Assigned to it (find your applications [here](h
 
 Node.JS and NPM installed
 
+PowerShell
+
 (Optional) A Code Editor or IDE (I prefer VS Code but go figure)
 
 ### Setup
