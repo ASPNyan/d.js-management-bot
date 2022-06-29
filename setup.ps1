@@ -5,8 +5,11 @@ Remove-Item .\management-bot.zip
 cd .\Management-Bot
 Remove-Item .\.env
 
+cls
 $Token = Read-Host -Prompt 'Input Your Bot Token Here'
+cls
 $Mongo = Read-Host -Prompt 'Input Your MongoDB URI Here'
+cls
 
 Add-Content -Path .\.env -Value ('TOKEN='+$Token)
 Add-Content -Path .\.env -Value ('MONGODB='+$Mongo)
