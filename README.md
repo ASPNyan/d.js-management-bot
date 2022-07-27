@@ -40,7 +40,7 @@ export default {
 
 [TS-Node](https://www.npmjs.com/package/ts-node): ^10.7.0
 
-[Discord.JS](https://www.npmjs.com/package/discord.js): 13.9.0
+[Discord.JS](https://www.npmjs.com/package/discord.js): 13.9.1
 
 [WOKCommands](https://www.npmjs.com/package/wokcommands): ^1.5.3
 
