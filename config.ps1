@@ -1,4 +1,5 @@
-﻿$ban = Read-Host -Prompt 'Enable Ban Command? (y/n)'
+cls
+$ban = Read-Host -Prompt 'Enable Ban Command? (y/n)'
 $docs = Read-Host -Prompt 'Enable Documentation Command? (y/n)'
 $kick = Read-Host -Prompt 'Enable Kick Command? (y/n)'
 $purge = Read-Host -Prompt 'Enable Purge Command? (y/n)'
