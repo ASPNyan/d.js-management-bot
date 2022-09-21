@@ -1,3 +1,9 @@
+### Warning:
+# ⚠️ This Bot Is On Discord.JS v13 and I Will No Longer Support It! ⚠️
+## [You Can Find An Updated Version Here](https://github.com/ASPNyan/discord-handlers-example)
+
+---
+
 # Discord Management Bot
 ### A Discord Bot Framework Utilising Mainly [Discord.JS v13](https://github.com/DiscordJS/Discord.JS/tree/v13) & [WOKCommands](https://github.com/AlexzanderFlores/WOKCommands)
 
